@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Jumbotron } from "react-bootstrap";
 
 import Trainer from "./containers/Trainer/Trainer";
 import NavBar from "./containers/NavBar/NavBar";
+import RoundHistory from "./containers/RoundHistory/RoundHistory";
 
 const testCardsList = [
   {
@@ -272,15 +273,39 @@ class App extends Component {
   render() {
     const { character, filter, property } = testRoundObj;
     return (
-      <div>
-        <NavBar character={character} filter={filter} property={property} />
+      <BrowserRouter>
+        <div>
+          <NavBar character={character} filter={filter} property={property} />
+          <div className="container" style={{ maxWidth: 900, marginTop: 0 }}>
+            <Jumbotron>
+              <Switch>
+                <Route
+                  path="/history"
+                  render={props => (
+                    <RoundHistory
+                      {...props}
+                      history={JSON.parse(
+                        localStorage.getItem("userRoundsHistory")
+                      )}
+                    />
+                  )}
+                />
 
-        <div className="container" style={{ maxWidth: 900, marginTop: 0 }}>
-          <Jumbotron>
-            <Trainer round={testRoundObj} style={{ textAlign: "center" }} />
-          </Jumbotron>
+                <Route
+                  path="/"
+                  render={props => (
+                    <Trainer
+                      {...props}
+                      round={testRoundObj}
+                      style={{ textAlign: "center" }}
+                    />
+                  )}
+                />
+              </Switch>
+            </Jumbotron>
+          </div>
         </div>
-      </div>
+      </BrowserRouter>
     );
   }
 }

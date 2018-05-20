@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default class NavBar extends Component {
   render() {
@@ -7,7 +8,7 @@ export default class NavBar extends Component {
       <Navbar inverse collapseOnSelect style={{ marginBottom: 10 }}>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="//localhost:3000">FDT</a>
+            <Link to="/"> FDT </Link>
           </Navbar.Brand>
 
           <Navbar.Toggle />
@@ -18,6 +19,9 @@ export default class NavBar extends Component {
             <NavDropdown title="Character" id={"char-drop"} />
             <NavDropdown title="Filter" id={"filt-drop"} />
             <NavDropdown title="Property" id={"prop-drop"} />
+            <li>
+              <Link to="/history"> User Stats </Link>
+            </li>
           </Nav>
           <Nav pullRight />
         </Navbar.Collapse>

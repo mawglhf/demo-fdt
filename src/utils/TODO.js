@@ -8,7 +8,6 @@
  *
  * TODO: Find some basic mobile website/app design/styling inspiration
  * TODO: Focus styling everypage for Mobile Users First => Refactor some of RoundView to use react-bootstrap
- * TODO: Finish Current Required Features and Init Repository on Github
  * TODO: Deploy using Heroku
  */
 
@@ -35,4 +34,5 @@
  * DONE: Finish setting up setStatePostRoundData and how the Score components use it as props!
  * DONE: Check to see if an updated version of the t7data exists that includes Noctis
  * DONE: Create Skeleton for UserStats(RoundHistory) Page and connect to localStorage
+ * DONE: Finish Current Required Features and Init Repository on Github
  */
