@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import RoundsPlayedHistory from "./RoundsPlayedHistory";
-
+import MostMissedCards from "./MostMissedCards";
 /**
  * history
  * This is the object in localStorage containing all of a User's Round History
@@ -30,7 +30,7 @@ const MostRecentScore = props => {
   return <h3> Most Recent Score: {props.history.slice(-1)[0]["percent"]}%</h3>;
 };
 
-const MostMissedCards = props => {
+const RenderMissedCards = props => {
   const allRounds = props.history;
 
   const sortMissedCards = () => {
@@ -56,20 +56,7 @@ const MostMissedCards = props => {
   };
   const allMissedCards = sortMissedCards();
 
-  return (
-    <div>
-      <h3>Top 3 Most Missed Moves</h3>
-      <h5>
-        Move: {allMissedCards[0][0]} # of times Missed: {allMissedCards[0][1]}
-      </h5>
-      <h5>
-        Move: {allMissedCards[1][0]} # of times Missed: {allMissedCards[1][1]}
-      </h5>
-      <h5>
-        Move: {allMissedCards[2][0]} # of times Missed: {allMissedCards[2][1]}
-      </h5>
-    </div>
-  );
+  return <MostMissedCards missedCards={allMissedCards} />;
 };
 
 export default class RoundHistory extends Component {
@@ -77,12 +64,13 @@ export default class RoundHistory extends Component {
     const { history } = this.props;
     return (
       <div style={{ textAlign: "center" }}>
-        <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+        <h2 style={{ marginTop: 5 }}>User Statistics for All Rounds Played</h2>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
           <MostRecentScore history={history} />
           <TotalAverageScore history={history} />
           <TotalRoundsPlayed history={history} />
         </div>
-        <MostMissedCards history={history} />
+        <RenderMissedCards history={history} />
         <RoundsPlayedHistory history={history} />
       </div>
     );

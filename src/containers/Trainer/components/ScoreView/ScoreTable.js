@@ -7,6 +7,11 @@ export default class ScoreTable extends Component {
 
     const columns = [
       {
+        Header: "#",
+        id: "index",
+        accessor: item => roundCardsList.indexOf(item) + 1
+      },
+      {
         Header: "Move",
         id: "notation",
         accessor: item => item[0]
@@ -31,9 +36,10 @@ export default class ScoreTable extends Component {
     return (
       <ReactTable
         data={roundCardsList}
+        showPagination={roundCardsList.length > 15}
         columns={columns}
         defaultPageSize={roundCardsList.length}
-        style={{ height: 700 }}
+        style={{ height: 700, textAlign: "center" }}
         className="-highlight"
         getTrProps={(state, rowInfo, column) => {
           return {
@@ -46,5 +52,3 @@ export default class ScoreTable extends Component {
     );
   }
 }
-
-//  defaultPageSize={postRoundData["roundCardsList"].length}

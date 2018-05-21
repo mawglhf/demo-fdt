@@ -12,7 +12,13 @@ export default class RenderCard extends Component {
     const { notation, image, choices } = this.props.card;
     return (
       <div>
-        <h2 style={{ display: "flex", justifyContent: "space-evenly" }}>
+        <h2
+          style={{
+            display: "flex",
+            justifyContent: "space-evenly",
+            marginTop: 10
+          }}
+        >
           {" "}
           {notation}{" "}
         </h2>

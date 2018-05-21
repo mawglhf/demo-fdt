@@ -1,14 +1,24 @@
 /**
  * Necessary For One Char Demo
- * TODO: Incorporate React-Router for Navigation
- * TODO: Separate Home from InitialView => Jumbotron with RoundTypeBar and Portrait of Character
- *
- * TODO: Refactor Dropdowns from cra-fdt into using Props and Callbacks - Wait to implement functionality
+ * TODO: Implement Dropdowns without Selection Functionality
  * TODO: Create a constants directory or file for storing allCharNames, allFilterNames, etc.
  *
- * TODO: Find some basic mobile website/app design/styling inspiration
- * TODO: Focus styling everypage for Mobile Users First => Refactor some of RoundView to use react-bootstrap
  * TODO: Deploy using Heroku
+ */
+
+/**   MOBILE FIRST DESIGN
+ *
+ * TODO: RoundView
+ * TODO: - Fit GIF into the frame
+ * TODO: ScoreView
+ * TODO: - Add Move # as a column
+ * TODO: - Store Round Data should only be Pressable Once
+ * TODO: - Play Again Button should work
+ * TODO: RoundHistory
+ * TODO: - Format Top 3 Missed Moves
+ * TODO: - Add Correct Answer to Missed Moves list
+ * TODO: - Rename Section from Rounds Played History
+ *
  */
 
 /**
@@ -35,4 +45,14 @@
  * DONE: Check to see if an updated version of the t7data exists that includes Noctis
  * DONE: Create Skeleton for UserStats(RoundHistory) Page and connect to localStorage
  * DONE: Finish Current Required Features and Init Repository on Github
+ * DONE: Incorporate React-Router for Navigation
+ * DONE: Separate Home from InitialView => Jumbotron with RoundTypeBar and Portrait of Character
+ *
+ *      MOBILE FIRST DESIGN
+ * DONE: InitialView - Keep Tabs all in one line
+ * DONE: RoundView - Buttons to resize when on mobile
+ * DONE: - FDT Link NavBar should work during a round
+ * DONE: - Add Character Name
+ * DONE: - Remove Margin at top of Jumbotron
+ * DONE: ScoreTable - Remove Page Tabs and Rows Selection
  */

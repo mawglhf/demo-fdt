@@ -14,11 +14,10 @@ const styles = {
     textAlign: "center"
   },
   image: {
-    maxHeight: 500,
     height: "auto",
     width: "auto",
-    maxWidth: "100%",
-    minHeight: 360,
-    minWidth: 640
+    minWidth: 315,
+    maxHeight: 360,
+    maxWidth: 640
   }
 };

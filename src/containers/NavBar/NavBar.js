@@ -5,12 +5,11 @@ import { Link } from "react-router-dom";
 export default class NavBar extends Component {
   render() {
     return (
-      <Navbar inverse collapseOnSelect style={{ marginBottom: 10 }}>
+      <Navbar inverse collapseOnSelect style={{ marginBottom: 5 }}>
         <Navbar.Header>
           <Navbar.Brand>
             <Link to="/"> FDT </Link>
           </Navbar.Brand>
-
           <Navbar.Toggle />
         </Navbar.Header>
 
@@ -23,7 +22,6 @@ export default class NavBar extends Component {
               <Link to="/history"> User Stats </Link>
             </li>
           </Nav>
-          <Nav pullRight />
         </Navbar.Collapse>
       </Navbar>
     );

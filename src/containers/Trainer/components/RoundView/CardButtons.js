@@ -21,7 +21,16 @@ export default class CardButtons extends Component {
 
   render() {
     return (
-      <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+      <div
+        style={{
+          textAlign: "center",
+          display: "flex",
+          justifyContent: "center",
+          maxWidth: 640,
+          marginLeft: "auto",
+          marginRight: "auto"
+        }}
+      >
         {this.renderButtons(this.props.choices)}
       </div>
     );
@@ -31,6 +40,7 @@ export default class CardButtons extends Component {
 const styles = {
   choiceButtons: {
     minHeight: 20,
-    minWidth: 130
+
+    flexGrow: 1
   }
 };

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Jumbotron } from "react-bootstrap";
 
+import Home from "./containers/Home/Home";
 import Trainer from "./containers/Trainer/Trainer";
 import NavBar from "./containers/NavBar/NavBar";
 import RoundHistory from "./containers/RoundHistory/RoundHistory";
@@ -274,36 +275,37 @@ class App extends Component {
     const { character, filter, property } = testRoundObj;
     return (
       <BrowserRouter>
-        <div>
+        <div className="container" style={{ maxWidth: 750 }}>
           <NavBar character={character} filter={filter} property={property} />
-          <div className="container" style={{ maxWidth: 900, marginTop: 0 }}>
-            <Jumbotron>
-              <Switch>
-                <Route
-                  path="/history"
-                  render={props => (
-                    <RoundHistory
-                      {...props}
-                      history={JSON.parse(
-                        localStorage.getItem("userRoundsHistory")
-                      )}
-                    />
-                  )}
-                />
 
-                <Route
-                  path="/"
-                  render={props => (
-                    <Trainer
-                      {...props}
-                      round={testRoundObj}
-                      style={{ textAlign: "center" }}
-                    />
-                  )}
-                />
-              </Switch>
-            </Jumbotron>
-          </div>
+          <Jumbotron style={{ paddingTop: 5 }}>
+            <Switch>
+              <Route
+                path="/history"
+                render={props => (
+                  <RoundHistory
+                    {...props}
+                    history={JSON.parse(
+                      localStorage.getItem("userRoundsHistory")
+                    )}
+                  />
+                )}
+              />
+
+              <Route
+                path="/trainer"
+                render={props => (
+                  <Trainer
+                    {...props}
+                    round={testRoundObj}
+                    style={{ textAlign: "center" }}
+                  />
+                )}
+              />
+
+              <Route path="/" component={Home} />
+            </Switch>
+          </Jumbotron>
         </div>
       </BrowserRouter>
     );
