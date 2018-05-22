@@ -26,7 +26,11 @@ export default class MyNavDropdown extends Component {
 
   renderMenuItems = (list, select) => {
     return list.map(item => {
-      return <MenuItem onClick={select(this.updateTitle)}>{item}</MenuItem>;
+      return (
+        <MenuItem key={item} onClick={() => select(this.updateTitle(item))}>
+          {item}
+        </MenuItem>
+      );
     });
   };
 
@@ -40,19 +44,3 @@ export default class MyNavDropdown extends Component {
     );
   }
 }
-
-/*
-const list = ["Akuma", "Alisa", "Dragunov"];
-
-<MyNavDropdown 
-  type={"Character"} 
-  list={}
-  select={choice => {
-  this.setState({
-    character: choice
-  });
-};
-/>
-
-
-*/

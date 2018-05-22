@@ -1,7 +1,5 @@
 /**
  * Necessary For One Char Demo
- * TODO: Implement Dropdowns without Selection Functionality
- * TODO: Create a constants directory or file for storing allCharNames, allFilterNames, etc.
  *
  * TODO: Deploy using Heroku
  */
@@ -11,7 +9,6 @@
  * TODO: RoundView
  * TODO: - Fit GIF into the frame
  * TODO: ScoreView
- * TODO: - Add Move # as a column
  * TODO: - Store Round Data should only be Pressable Once
  * TODO: - Play Again Button should work
  * TODO: RoundHistory
@@ -47,6 +44,8 @@
  * DONE: Finish Current Required Features and Init Repository on Github
  * DONE: Incorporate React-Router for Navigation
  * DONE: Separate Home from InitialView => Jumbotron with RoundTypeBar and Portrait of Character
+ * DONE: Implement Dropdowns without Selection Functionality
+ * TODO: Create a constants directory or file for storing allCharNames, allFilterNames, etc.
  *
  *      MOBILE FIRST DESIGN
  * DONE: InitialView - Keep Tabs all in one line
@@ -55,4 +54,5 @@
  * DONE: - Add Character Name
  * DONE: - Remove Margin at top of Jumbotron
  * DONE: ScoreTable - Remove Page Tabs and Rows Selection
+ * DONE: ScoreView - Add Move # as a column
  */

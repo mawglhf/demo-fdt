@@ -1,6 +1,13 @@
 import React, { Component } from "react";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
+
+import {
+  characterNames,
+  filterNames,
+  propertyNames
+} from "../../utils/constants";
+import MyNavDropdown from "./components/MyNavDropdown";
 
 export default class NavBar extends Component {
   render() {
@@ -15,9 +22,33 @@ export default class NavBar extends Component {
 
         <Navbar.Collapse>
           <Nav>
-            <NavDropdown title="Character" id={"char-drop"} />
-            <NavDropdown title="Filter" id={"filt-drop"} />
-            <NavDropdown title="Property" id={"prop-drop"} />
+            <MyNavDropdown
+              type={"Character"}
+              list={characterNames}
+              select={choice => {
+                this.setState({
+                  character: choice
+                });
+              }}
+            />
+            <MyNavDropdown
+              type={"Filter"}
+              list={filterNames}
+              select={choice => {
+                this.setState({
+                  filter: choice
+                });
+              }}
+            />
+            <MyNavDropdown
+              type={"Property"}
+              list={propertyNames}
+              select={choice => {
+                this.setState({
+                  property: choice
+                });
+              }}
+            />
             <li>
               <Link to="/history"> User Stats </Link>
             </li>
