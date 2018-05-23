@@ -12,23 +12,26 @@ export default class StoreDataButton extends Component {
 
   handleClick() {
     const { postRoundData, updateDataStored } = this.props;
+    const { dataStored } = this.state;
+    // Don't store data more than once
+    if (dataStored) {
+      console.log("Data for this round has already been stored");
+    } else {
+      const userRoundsHistory = localStorage["userRoundsHistory"]
+        ? JSON.parse(localStorage.getItem("userRoundsHistory"))
+        : [];
 
-    const userRoundsHistory = localStorage["userRoundsHistory"]
-      ? JSON.parse(localStorage.getItem("userRoundsHistory"))
-      : [];
+      userRoundsHistory.push(postRoundData);
 
-    userRoundsHistory.push(postRoundData);
+      localStorage.setItem(
+        "userRoundsHistory",
+        JSON.stringify(userRoundsHistory)
+      );
 
-    localStorage.setItem(
-      "userRoundsHistory",
-      JSON.stringify(userRoundsHistory)
-    );
-
-    console.log(JSON.parse(localStorage.getItem("userRoundsHistory")));
-
-    // In order for the user to know we stored the data, we start by changing component state to true
-    this.setState({ dataStored: true });
-    updateDataStored();
+      // In order for the user to know we stored the data, we start by changing component state to true
+      this.setState({ dataStored: true });
+      updateDataStored();
+    }
   }
 
   render() {

@@ -26,7 +26,7 @@ export default class ScoreView extends Component {
             postRoundData={postRoundData}
             updateDataStored={() => this.setState({ dataStored: true })}
           />
-          <Link to="/">
+          <Link to="/trainer">
             <Button bsStyle="primary"> Play Again </Button>
           </Link>
         </div>

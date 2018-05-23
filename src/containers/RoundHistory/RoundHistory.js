@@ -30,8 +30,14 @@ const MostRecentScore = props => {
   return <h3> Most Recent Score: {props.history.slice(-1)[0]["percent"]}%</h3>;
 };
 
+/**
+ * Creates an array of missed cards with the notation and number of times missed
+ * @returns Array of [Key, Value] pairs representing each missed Card.
+ */
+
 const RenderMissedCards = props => {
   const allRounds = props.history;
+  const cards = props.history[0].cards;
 
   const sortMissedCards = () => {
     // Gather all the missed cards arrays from each round and concat them into one array
@@ -40,21 +46,37 @@ const RenderMissedCards = props => {
     }, []);
 
     // Count how many times each missed card appears by adding it to an object
-    const countedObj = allMissedCards.reduce((obj, currentLetter) => {
-      if (!obj[currentLetter]) {
-        obj[currentLetter] = 1;
+    const countedObj = allMissedCards.reduce((obj, currentCard) => {
+      if (!obj[currentCard]) {
+        obj[currentCard] = 1;
       } else {
-        obj[currentLetter]++;
+        obj[currentCard]++;
       }
       return obj;
     }, {});
+
     // To sort the object from Most missed to least missed, convert to an array and then sort
     return Object.entries(countedObj).sort((a, b) => {
       return b[1] - a[1];
     });
-    // Final returned object is an Array of [Key, Value] pairs
   };
-  const allMissedCards = sortMissedCards();
+  const sortedMissedCards = sortMissedCards();
+
+  // For every missed card in the sortedMissedCards array, find it's answer
+  const addAnswersToCards = () => {
+    const cardsWithAnswers = sortedMissedCards.map(card => {
+      cards.forEach(roundCard => {
+        if (card[0] === roundCard.notation) {
+          card.push(roundCard.answer);
+        }
+      });
+      return card;
+    });
+    console.log(cardsWithAnswers);
+    return cardsWithAnswers;
+  };
+
+  const allMissedCards = addAnswersToCards();
 
   return <MostMissedCards missedCards={allMissedCards} />;
 };

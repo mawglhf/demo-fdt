@@ -1,27 +1,25 @@
 /**
- * Necessary For One Char Demo
+ * Necessary For One Character Demo
+ *
+ *        CLEANING UP THE CODE
+ * TODO: Refactor obviously hackey MostMissedCards component - DRY
+ * TODO: Refactor RenderMissedCards logic to it's own component - too messy in RoundHistory
+ *
+ *        VISUALS
+ * TODO: RoundHistory - Most Recent Score and Average Score need circle percent visualizations
+ * TODO: RoundHistory - Need a LineGraph to separate User Overall Stats from Rounds Played History
+ *
+ *        MOBILE FIRST DESIGN
+ * TODO: RoundView - CardImage needs to resize based on mobile vertical/horizontal
+ *
  *
  * TODO: Deploy using Heroku
- */
-
-/**   MOBILE FIRST DESIGN
- *
- * TODO: RoundView
- * TODO: - Fit GIF into the frame
- * TODO: ScoreView
- * TODO: - Store Round Data should only be Pressable Once
- * TODO: - Play Again Button should work
- * TODO: RoundHistory
- * TODO: - Format Top 3 Missed Moves
- * TODO: - Add Correct Answer to Missed Moves list
- * TODO: - Rename Section from Rounds Played History
- *
  */
 
 /**
  * Necessary for Release / Incorporating the Rest of the Characters WITHOUT Images
  * TODO: Debug createAllCardsList.js in Utils
- * TODO: Hook createAllCardsList up to Trainer and getting called on ComponentDidMount
+ * TODO: Hook createAllCardsList up to Trainer
  * TODO: Setup Trainer to USE Props of Character, Filter, Property
  * TODO: Place State for Character, Filter, Property, (user) under App.js State
  * TODO: Implement and Debug filterMethods.js from cra-fdt
@@ -55,4 +53,9 @@
  * DONE: - Remove Margin at top of Jumbotron
  * DONE: ScoreTable - Remove Page Tabs and Rows Selection
  * DONE: ScoreView - Add Move # as a column
+ * DONE: - Store Round Data should only be Pressable Once
+ * DONE: - Play Again Button should work
+ * DONE: RoundHistory - Format Top 5 Missed Moves
+ * DONE: - Add Correct Answer to Missed Moves list
+ * DONE: - Rename Section from Rounds Played History
  */
