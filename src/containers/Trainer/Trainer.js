@@ -9,14 +9,20 @@ class Trainer extends Component {
     super(props);
     this.state = {
       roundStart: false,
-      roundEnd: false,
-      round: this.props.round
+      roundEnd: false
     };
   }
 
+  handleClick = () => {
+    this.props.updateCards();
+    this.setState({
+      roundStart: true
+    });
+  };
+
   render() {
     const { roundStart, roundEnd, postRoundData } = this.state;
-    const { round } = this.props;
+    const { round, updateCards } = this.props;
 
     if (roundEnd && postRoundData) {
       return <ScoreView postRoundData={postRoundData} />;
@@ -25,9 +31,8 @@ class Trainer extends Component {
     if (!roundStart)
       return (
         <InitialView
-          onStartPress={() => {
-            this.setState({ roundStart: true });
-          }}
+          onStartPress={() => this.handleClick()}
+          updateCards={() => updateCards()}
         />
       );
 

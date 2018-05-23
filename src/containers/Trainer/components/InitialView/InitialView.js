@@ -3,6 +3,7 @@ import { Button, Alert } from "react-bootstrap";
 
 export default class InitialView extends Component {
   render() {
+    const { updateCards, onStartPress } = this.props;
     return (
       <div>
         <h1 style={{ marginTop: 5 }}> Frame Data Trainer </h1>
@@ -12,6 +13,10 @@ export default class InitialView extends Component {
           To begin, use the navbar to select a character, a filter, and a
           property, then press Start Trainer.
         </p>
+
+        <Button bsStyle="primary" bsSize="large" onClick={() => updateCards()}>
+          Update Cards
+        </Button>
 
         <div
           style={{
@@ -24,7 +29,7 @@ export default class InitialView extends Component {
             style={{ width: "40%" }}
             bsStyle="primary"
             bsSize="large"
-            onClick={() => this.props.onStartPress()}
+            onClick={() => onStartPress()}
             block
           >
             {" "}

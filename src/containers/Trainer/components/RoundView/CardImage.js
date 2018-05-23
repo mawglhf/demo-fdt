@@ -1,6 +1,15 @@
 import React, { Component } from "react";
 
 export default class CardImage extends Component {
+  checkForImage = () => {
+    const { image } = this.props;
+    if (typeof image === "string") {
+      return <img src={image} alt={""} style={styles.image} />;
+    } else {
+      return <h1>{image[0]}</h1>;
+    }
+  };
+
   render() {
     return (
       <div style={styles.imageContainer}>

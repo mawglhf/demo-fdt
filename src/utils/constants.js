@@ -3,12 +3,11 @@ import allData from "./t7data.json";
 export const characterNames = Object.keys(allData);
 export const filterNames = [
   "All",
-  "most_popular",
-  "BlockPunishable",
-  "Standing",
-  "WhileStanding",
+  "Most Popular",
+  "Block Punishable",
+  "While Standing",
   "Stance",
-  "FullCrouch",
+  "Full Crouch",
   "Strings",
   "Throws"
 ];

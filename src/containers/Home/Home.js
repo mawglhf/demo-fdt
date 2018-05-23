@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { Tabs, Tab, Button, Alert } from "react-bootstrap";
-
 import { Link } from "react-router-dom";
 
-export default class InitialView extends Component {
+export default class Home extends Component {
   render() {
     return (
       <div>
         <h1 style={{ marginTop: 5 }}> Frame Data Trainer </h1>
         <h3 style={{ textAlign: "right" }}> Training Mode On The Go </h3>
+
         <p>
           To begin, use the navbar to select a character, a filter, and a
           property, then press Start Trainer.

@@ -11,6 +11,8 @@ import MyNavDropdown from "./components/MyNavDropdown";
 
 export default class NavBar extends Component {
   render() {
+    const { updateCharacter, updateFilter, updateProperty } = this.props;
+
     return (
       <Navbar inverse collapseOnSelect style={{ marginBottom: 5 }}>
         <Navbar.Header>
@@ -25,29 +27,17 @@ export default class NavBar extends Component {
             <MyNavDropdown
               type={"Character"}
               list={characterNames}
-              select={choice => {
-                this.setState({
-                  character: choice
-                });
-              }}
+              select={choice => updateCharacter(choice)}
             />
             <MyNavDropdown
               type={"Filter"}
               list={filterNames}
-              select={choice => {
-                this.setState({
-                  filter: choice
-                });
-              }}
+              select={choice => updateFilter(choice)}
             />
             <MyNavDropdown
               type={"Property"}
               list={propertyNames}
-              select={choice => {
-                this.setState({
-                  property: choice
-                });
-              }}
+              select={choice => updateProperty(choice)}
             />
             <li>
               <Link to="/history"> User Stats </Link>
