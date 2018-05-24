@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
+import _ from "lodash";
 
 export default class StoreDataButton extends Component {
   constructor(props) {
@@ -10,27 +11,41 @@ export default class StoreDataButton extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  createUserRoundsHistory = roundData => {
+    const { character, filter, property } = roundData;
+    const userRoundsHistory = localStorage["userRoundsHistory"]
+      ? JSON.parse(localStorage.getItem("userRoundsHistory"))
+      : {};
+
+    const roundTypeExists = _.get(
+      userRoundsHistory,
+      [character, filter, property],
+      false
+    );
+
+    if (!roundTypeExists) {
+      _.set(userRoundsHistory, [character, filter, property], []);
+    }
+
+    userRoundsHistory[character][filter][property].push(roundData);
+
+    localStorage.setItem(
+      "userRoundsHistory",
+      JSON.stringify(userRoundsHistory)
+    );
+
+    this.setState({ dataStored: true });
+    this.props.updateDataStored();
+  };
+
   handleClick() {
-    const { postRoundData, updateDataStored } = this.props;
+    const { postRoundData } = this.props;
     const { dataStored } = this.state;
-    // Don't store data more than once
+
     if (dataStored) {
       console.log("Data for this round has already been stored");
     } else {
-      const userRoundsHistory = localStorage["userRoundsHistory"]
-        ? JSON.parse(localStorage.getItem("userRoundsHistory"))
-        : [];
-
-      userRoundsHistory.push(postRoundData);
-
-      localStorage.setItem(
-        "userRoundsHistory",
-        JSON.stringify(userRoundsHistory)
-      );
-
-      // In order for the user to know we stored the data, we start by changing component state to true
-      this.setState({ dataStored: true });
-      updateDataStored();
+      this.createUserRoundsHistory(postRoundData);
     }
   }
 
@@ -46,3 +61,21 @@ export default class StoreDataButton extends Component {
     );
   }
 }
+
+/**
+ * userRoundsHistory === Array of Objects = List of Rounds
+ * Each Round is an Object with properties:
+ * cards, character, date, filter, missedCardsList, percent, property, roundCardsList, score, userName
+ *
+ * We need to change it to separate rounds based on Char/Filt/Prop
+ *
+ * userRoundsHistory = {
+ *  "Dragunov": {
+ *    "Most Popular": {
+ *      "on_block": {
+ *
+ *       }
+ *     }
+ *   }
+ * }
+ */

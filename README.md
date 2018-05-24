@@ -28,9 +28,11 @@ Finally, open http://localhost:3000 to view it in the broswer.
 
 ## Built With
 
-* [React](https://reactjs.org/docs/hello-world.html)
+* [React](https://github.com/facebook/create-react-app)
 * [React-Bootstrap](https://react-bootstrap.github.io/)
 * [React-Router](https://github.com/ReactTraining/react-router)
+* [React-Table](https://react-table.js.org/#/story/readme)
+* [Lodash](https://lodash.com/docs/4.17.10)
 
 ## Author
 

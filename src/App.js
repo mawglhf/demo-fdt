@@ -84,6 +84,9 @@ class App extends Component {
                 render={props => (
                   <RoundHistory
                     {...props}
+                    character={character}
+                    filter={filter}
+                    property={property}
                     history={JSON.parse(
                       localStorage.getItem("userRoundsHistory")
                     )}

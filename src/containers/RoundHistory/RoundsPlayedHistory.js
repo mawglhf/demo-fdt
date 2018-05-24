@@ -4,7 +4,7 @@ import ScoreTable from "../Trainer/components/ScoreView/ScoreTable";
 import RoundSummary from "../Trainer/components/ScoreView/RoundSummary";
 
 export default class RoundsPlayedHistory extends Component {
-  allRounds = this.props.history.reverse();
+  allRounds = this.props.roundsList.reverse();
 
   allRoundCardsLists = this.allRounds.reduce((acc, roundObj) => {
     acc.push(roundObj["roundCardsList"]);

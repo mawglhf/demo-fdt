@@ -9,11 +9,6 @@ export default class Home extends Component {
         <h1 style={{ marginTop: 5 }}> Frame Data Trainer </h1>
         <h3 style={{ textAlign: "right" }}> Training Mode On The Go </h3>
 
-        <p>
-          To begin, use the navbar to select a character, a filter, and a
-          property, then press Start Trainer.
-        </p>
-
         <div style={{ textAlign: "center", marginBottom: 10 }}>
           <Link to="/trainer">
             <Button bsStyle="primary" bsSize="large">

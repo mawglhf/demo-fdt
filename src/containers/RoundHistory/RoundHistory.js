@@ -1,33 +1,25 @@
 import React, { Component } from "react";
-
+import _ from "lodash";
 import RoundsPlayedHistory from "./RoundsPlayedHistory";
 import MostMissedCards from "./MostMissedCards";
-/**
- * history
- * This is the object in localStorage containing all of a User's Round History
- * Array of Objects
- * Each Object has userName, score, property, filter, character, percent
- * roundCardsList = Array of Arrays, each inner Array has notation, answer, choice, correct
- *    ["f+2", "3", "-2", false]
- * missedCardsList = Array of Strings, containing the notation of each missed Card
- * cards = Array of Objects containing all info for each Card
- */
 
 const TotalAverageScore = props => {
-  const reducedScores = props.history.reduce((average, roundObj) => {
+  const reducedScores = props.roundsList.reduce((average, roundObj) => {
     return average + roundObj["percent"];
   }, 0);
-  const averagedScores = Math.floor(reducedScores / props.history.length);
+  const averagedScores = Math.floor(reducedScores / props.roundsList.length);
 
   return <h3> Average Score: {averagedScores}% </h3>;
 };
 
 const TotalRoundsPlayed = props => {
-  return <h3>Total # of Rounds Played: {props.history.length}</h3>;
+  return <h3>Total # of Rounds Played: {props.roundsList.length}</h3>;
 };
 
 const MostRecentScore = props => {
-  return <h3> Most Recent Score: {props.history.slice(-1)[0]["percent"]}%</h3>;
+  return (
+    <h3> Most Recent Score: {props.roundsList.slice(-1)[0]["percent"]}%</h3>
+  );
 };
 
 /**
@@ -36,8 +28,8 @@ const MostRecentScore = props => {
  */
 
 const RenderMissedCards = props => {
-  const allRounds = props.history;
-  const cards = props.history[0].cards;
+  const allRounds = props.roundsList;
+  const cards = props.roundsList[0].cards;
 
   const sortMissedCards = () => {
     // Gather all the missed cards arrays from each round and concat them into one array
@@ -83,18 +75,47 @@ const RenderMissedCards = props => {
 
 export default class RoundHistory extends Component {
   render() {
-    const { history } = this.props;
-    return (
-      <div style={{ textAlign: "center" }}>
-        <h2 style={{ marginTop: 5 }}>User Statistics for All Rounds Played</h2>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <MostRecentScore history={history} />
-          <TotalAverageScore history={history} />
-          <TotalRoundsPlayed history={history} />
-        </div>
-        <RenderMissedCards history={history} />
-        <RoundsPlayedHistory history={history} />
-      </div>
+    const { history, character, filter, property } = this.props;
+    // Need to refactor this out of this function and place it into state of something higher
+    const roundTypeExists = _.get(
+      history,
+      [character, filter, property],
+      false
     );
+    if (!roundTypeExists) {
+      return (
+        <h2>
+          Currently, you do not have any recorded round data with the selected
+          options
+        </h2>
+      );
+    } else {
+      const roundsList = history[character][filter][property];
+      return (
+        <div style={{ textAlign: "center" }}>
+          <h2 style={{ marginTop: 5 }}>
+            User Statistics for All Rounds Played
+          </h2>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <MostRecentScore roundsList={roundsList} />
+            <TotalAverageScore roundsList={roundsList} />
+            <TotalRoundsPlayed roundsList={roundsList} />
+          </div>
+          <RenderMissedCards roundsList={roundsList} />
+          <RoundsPlayedHistory roundsList={roundsList} />
+        </div>
+      );
+    }
   }
 }
+
+/**
+ * history
+ * This is the object in localStorage containing all of a User's Round History
+ * Array of Objects
+ * Each Object has userName, score, property, filter, character, percent
+ * roundCardsList = Array of Arrays, each inner Array has notation, answer, choice, correct
+ *    ["f+2", "3", "-2", false]
+ * missedCardsList = Array of Strings, containing the notation of each missed Card
+ * cards = Array of Objects containing all info for each Card
+ */

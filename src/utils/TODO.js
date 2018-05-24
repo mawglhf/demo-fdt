@@ -1,9 +1,11 @@
 /**
  * Necessary For One Character Demo
  *
+ *
  *        CLEANING UP THE CODE
  * TODO: Refactor obviously hackey MostMissedCards component - DRY
  * TODO: Refactor RenderMissedCards logic to it's own component - too messy in RoundHistory
+ * TODO: Add a CSS style sheet to centralize all the multiple 'styles={{ marginTop: 5 }}' etc
  *
  *        VISUALS
  * TODO: RoundHistory - Most Recent Score and Average Score need circle percent visualizations
@@ -17,13 +19,9 @@
  */
 
 /**
- * Necessary for Release / Incorporating the Rest of the Characters WITHOUT Images
- * TODO: Debug createAllCardsList.js in Utils
- * TODO: Hook createAllCardsList up to Trainer
- * TODO: Setup Trainer to USE Props of Character, Filter, Property
- * TODO: Place State for Character, Filter, Property, (user) under App.js State
- * TODO: Implement and Debug filterMethods.js from cra-fdt
- * TODO: Easily move the FrameData Screen from cra-fdt into demo
+ * Necessary for All Characters WITHOUT GIFS
+ * TODO: Add Most Popular tags to each character in t7Data.json
+ * TODO: filterMoves.js - Completely fill out the allStanceNames array
  */
 
 /**
@@ -44,6 +42,17 @@
  * DONE: Separate Home from InitialView => Jumbotron with RoundTypeBar and Portrait of Character
  * DONE: Implement Dropdowns without Selection Functionality
  * TODO: Create a constants directory or file for storing allCharNames, allFilterNames, etc.
+ *
+ *
+ * Necessary for Release / Incorporating the Rest of the Characters WITHOUT Images
+ * DONE: Debug createAllCardsList.js in Utils
+ * DONE: Hook createAllCardsList up to Trainer
+ * DONE: Setup Trainer to USE Props of Character, Filter, Property
+ * DONE: Place State for Character, Filter, Property, (user) under App.js State
+ * DONE: Implement and Debug filterMethods.js from cra-fdt
+ * DONE: Easily move the FrameData Screen from cra-fdt into demo
+ * DONE: Refactor StoreDataButton to store rounds based on Char/Filt/Prop
+ * DONE: Refactor User Stats page to show the information based on Char/Filt/Prop
  *
  *      MOBILE FIRST DESIGN
  * DONE: InitialView - Keep Tabs all in one line
