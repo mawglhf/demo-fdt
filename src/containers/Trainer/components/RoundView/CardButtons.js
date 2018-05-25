@@ -40,7 +40,7 @@ export default class CardButtons extends Component {
 const styles = {
   choiceButtons: {
     minHeight: 20,
-
+    width: "1vw",
     flexGrow: 1
   }
 };

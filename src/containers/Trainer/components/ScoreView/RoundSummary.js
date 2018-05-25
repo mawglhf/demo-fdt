@@ -8,7 +8,7 @@ export default class RoundSummary extends Component {
     return (
       <div>
         <div>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div style={{ display: "flex", justifyContent: "space-evenly" }}>
             <h3 style={{ marginTop: 5 }}>
               {" "}
               Correct {postRoundData["score"]} / {postRoundData["cards"].length}

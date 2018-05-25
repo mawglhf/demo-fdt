@@ -1,7 +1,6 @@
 /**
  * Necessary For One Character Demo
  *
- *
  *        CLEANING UP THE CODE
  * TODO: Refactor obviously hackey MostMissedCards component - DRY
  * TODO: Refactor RenderMissedCards logic to it's own component - too messy in RoundHistory
@@ -11,10 +10,7 @@
  * TODO: RoundHistory - Most Recent Score and Average Score need circle percent visualizations
  * TODO: RoundHistory - Need a LineGraph to separate User Overall Stats from Rounds Played History
  *
- *        MOBILE FIRST DESIGN
- * TODO: RoundView - CardImage needs to resize based on mobile vertical/horizontal
- *
- *
+ *        FINAL STEP (kinda)
  * TODO: Deploy using Heroku
  */
 
@@ -26,6 +22,8 @@
 
 /**
  * Eventually to make it actually not trash
+ * TODO: Add Google Analytics
+ * TODO: Cookie Store, similar to this https://github.com/fdsimms/linguana#cookie-store
  * TODO: Character Select Screen with Thumbnails
  * TODO: Refactor to use React and Redux 0_0
  * TODO: Rewrite in ReactNative LOL
@@ -67,4 +65,5 @@
  * DONE: RoundHistory - Format Top 5 Missed Moves
  * DONE: - Add Correct Answer to Missed Moves list
  * DONE: - Rename Section from Rounds Played History
+ * DONE: RoundView - CardImage needs to resize based on mobile vertical/horizontal
  */

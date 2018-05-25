@@ -67,7 +67,16 @@ class App extends Component {
     const { character, filter, property, round } = this.state;
     return (
       <BrowserRouter>
-        <div className="container">
+        <div
+          className="container"
+          id="app-container"
+          style={{
+            paddingLeft: 0,
+            paddingRight: 0,
+            backgroundColor: "#ccc",
+            height: "100vh"
+          }}
+        >
           <NavBar
             character={character}
             filter={filter}
@@ -77,7 +86,9 @@ class App extends Component {
             updateProperty={this.updateProperty}
           />
 
-          <Jumbotron style={{ paddingTop: 5 }}>
+          <Jumbotron
+            style={{ paddingTop: 5, marginBottom: 0, backgroundColor: "#ccc" }}
+          >
             <Switch>
               <Route
                 path="/history"

@@ -1,32 +1,30 @@
 import React, { Component } from "react";
+import { Image } from "react-bootstrap";
 
 export default class CardImage extends Component {
   checkForImage = () => {
     const { image } = this.props;
     if (typeof image === "string") {
-      return <img src={image} alt={""} style={styles.image} />;
+      return <Image src={image} alt={""} style={styles.image} responsive />;
     } else {
       return <h1>{image[0]}</h1>;
     }
   };
 
   render() {
-    return (
-      <div style={styles.imageContainer}>
-        <img src={this.props.image} alt={""} style={styles.image} />
-      </div>
-    );
+    return <div style={styles.imageContainer}>{this.checkForImage()}</div>;
   }
 }
 const styles = {
   imageContainer: {
+    justifyContent: "center",
     textAlign: "center"
   },
   image: {
-    height: "auto",
-    width: "auto",
-    minWidth: 315,
     maxHeight: 360,
-    maxWidth: 640
+    maxWidth: 640,
+    margin: "auto",
+    height: "auto",
+    width: "100%"
   }
 };
