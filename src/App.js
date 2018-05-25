@@ -38,7 +38,6 @@ class App extends Component {
   updateCards = () => {
     const { character, filter, property } = this.state;
     const cards = createAllCards(character, filter, property);
-    console.log(cards);
     this.setState({
       cards: cards
     });

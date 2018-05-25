@@ -64,7 +64,6 @@ const RenderMissedCards = props => {
       });
       return card;
     });
-    console.log(cardsWithAnswers);
     return cardsWithAnswers;
   };
 
@@ -93,6 +92,9 @@ export default class RoundHistory extends Component {
       const roundsList = history[character][filter][property];
       return (
         <div style={{ textAlign: "center" }}>
+          <h2>
+            Statistics for {character} {filter} {property}
+          </h2>
           <h2 style={{ marginTop: 5 }}>Summary</h2>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <MostRecentScore roundsList={roundsList} />

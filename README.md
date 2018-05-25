@@ -36,4 +36,8 @@ Finally, open http://localhost:3000 to view it in the broswer.
 
 ## Author
 
-* **Michael Wyatt** - [Contact](nrgaposok@pm.me)
+* **Michael Wyatt** - nrgaposok [at] pm [dot] me
+
+## Acknowledgments
+
+* T7 Frame Data sourced from both [tekken-frame-data](https://github.com/harounb/tekken-frame-data) and [T7Chicken](https://github.com/TekkenChicken), originally provided by rbnorway.org

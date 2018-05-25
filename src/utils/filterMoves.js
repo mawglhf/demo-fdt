@@ -99,7 +99,6 @@ const allFiltersArr = [
 
 const getFilterFn = filterName => {
   const filteredArr = allFiltersArr.filter(obj => obj.label === filterName);
-  console.log(filteredArr[0].method);
   return filteredArr[0].method;
 };
 

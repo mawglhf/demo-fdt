@@ -8,19 +8,33 @@ export default class Home extends Component {
       <div>
         <h1 style={{ marginTop: 5 }}> Frame Data Trainer </h1>
         <h3 style={{ textAlign: "right" }}> Training Mode On The Go </h3>
+        <div style={{ maxWidth: 750, margin: "auto" }}>
+          <p>
+            FDT is a tool that teaches players frame data for T7. Referencing
+            frame data and really knowing frame data are quite different. FDT
+            allows players to turn that information into knowledge.
+          </p>
 
-        <div style={{ textAlign: "center", marginBottom: 10 }}>
-          <Link to="/trainer">
-            <Button bsStyle="primary" bsSize="large">
-              {" "}
-              Go To Trainer{" "}
-            </Button>
-          </Link>
+          <p>
+            Focused and deliberate practice makes perfect. Test yourself by
+            playing a round with the trainer. After each round, you receive
+            feedback on exactly where you succeeded and where you fell short.
+            You can even view your progress over time on the User Stats page.
+          </p>
 
-          <Alert bsStyle="info" style={{ marginTop: 20 }}>
-            FDT is constantly being improved. At the moment, only Dragunov's
-            Most Popular moves have working GIFs!
-          </Alert>
+          <div style={{ textAlign: "center", marginBottom: 10 }}>
+            <Link to="/trainer">
+              <Button bsStyle="primary" bsSize="large">
+                {" "}
+                Go To Trainer{" "}
+              </Button>
+            </Link>
+
+            <Alert bsStyle="info" style={{ marginTop: 20 }}>
+              FDT is constantly being improved. At the moment, only Dragunov's
+              Most Popular moves have working GIFs!
+            </Alert>
+          </div>
         </div>
         <Tabs
           defaultActiveKey={0}

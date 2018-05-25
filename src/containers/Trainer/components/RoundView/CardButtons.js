@@ -25,7 +25,9 @@ export default class CardButtons extends Component {
         style={{
           textAlign: "center",
           display: "flex",
+          flexWrap: "wrap",
           justifyContent: "center",
+
           maxWidth: 640,
           marginLeft: "auto",
           marginRight: "auto"
