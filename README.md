@@ -32,6 +32,7 @@ Finally, open http://localhost:3000 to view it in the broswer.
 * [React-Bootstrap](https://react-bootstrap.github.io/)
 * [React-Router](https://github.com/ReactTraining/react-router)
 * [React-Table](https://react-table.js.org/#/story/readme)
+* [React-Circle](https://github.com/zzarcon/react-circle)
 * [Lodash](https://lodash.com/docs/4.17.10)
 
 ## Author

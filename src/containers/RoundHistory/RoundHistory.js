@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import _ from "lodash";
+import Circle from "react-circle";
+
 import RoundsPlayedHistory from "./RoundsPlayedHistory";
 import MostMissedCards from "./MostMissedCards";
+import HistoryHeader from "./HistoryHeader";
 
 const TotalAverageScore = props => {
   const reducedScores = props.roundsList.reduce((average, roundObj) => {
@@ -9,7 +12,19 @@ const TotalAverageScore = props => {
   }, 0);
   const averagedScores = Math.floor(reducedScores / props.roundsList.length);
 
-  return <h3> Average Score: {averagedScores}% </h3>;
+  return (
+    <div>
+      <h3>
+        {" "}
+        Average:{" "}
+        <Circle
+          progress={averagedScores}
+          bgColor="red"
+          textStyle={{ font: "bold 8rem Helvetica, Arial, sans-serif" }}
+        />{" "}
+      </h3>
+    </div>
+  );
 };
 
 const TotalRoundsPlayed = props => {
@@ -18,7 +33,14 @@ const TotalRoundsPlayed = props => {
 
 const MostRecentScore = props => {
   return (
-    <h3> Most Recent Score: {props.roundsList.slice(-1)[0]["percent"]}%</h3>
+    <h3>
+      Recent:{" "}
+      <Circle
+        progress={props.roundsList.slice(-1)[0]["percent"]}
+        bgColor="red"
+        textStyle={{ font: "bold 8rem Helvetica, Arial, sans-serif" }}
+      />{" "}
+    </h3>
   );
 };
 
@@ -92,14 +114,14 @@ export default class RoundHistory extends Component {
       const roundsList = history[character][filter][property];
       return (
         <div style={{ textAlign: "center" }}>
+          <HistoryHeader />
           <h2>
             Statistics for {character} {filter} {property}
           </h2>
-          <h2 style={{ marginTop: 5 }}>Summary</h2>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <MostRecentScore roundsList={roundsList} />
-            <TotalAverageScore roundsList={roundsList} />
             <TotalRoundsPlayed roundsList={roundsList} />
+            <TotalAverageScore roundsList={roundsList} />
           </div>
           <RenderMissedCards roundsList={roundsList} />
           <RoundsPlayedHistory roundsList={roundsList} />

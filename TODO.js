@@ -7,7 +7,6 @@
  * TODO: Add a CSS style sheet to centralize all the multiple 'styles={{ marginTop: 5 }}' etc
  *
  *        VISUALS
- * TODO: RoundHistory - Most Recent Score and Average Score need circle percent visualizations
  * TODO: RoundHistory - Need a LineGraph to separate User Overall Stats from Rounds Played History
  *
  *        FINAL STEP (kinda)
@@ -24,9 +23,12 @@
  * Eventually to make it actually not trash
  * TODO: Add Google Analytics
  * TODO: Cookie Store, similar to this https://github.com/fdsimms/linguana#cookie-store
+ * TODO: Error Handling
+ * TODO: Links to share Scores or Stats outside of the app
+ *
  * TODO: Character Select Screen with Thumbnails
- * TODO: Refactor to use React and Redux 0_0
- * TODO: Rewrite in ReactNative LOL
+ * TODO: Refactor to use Redux
+ * TODO: Rewrite in ReactNative
  */
 
 /**
@@ -40,6 +42,7 @@
  * DONE: Separate Home from InitialView => Jumbotron with RoundTypeBar and Portrait of Character
  * DONE: Implement Dropdowns without Selection Functionality
  * TODO: Create a constants directory or file for storing allCharNames, allFilterNames, etc.
+ * TODO: RoundHistory - Most Recent Score and Average Score need circle percent visualizations
  *
  *
  * Necessary for Release / Incorporating the Rest of the Characters WITHOUT Images
