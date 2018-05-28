@@ -1,6 +1,11 @@
 /**
  * Necessary For One Character Demo
  *
+ *        ISSUES WHEN ADDING MOST POPULAR:
+ * TODO: Alisa d/f+4 missing
+ * TODO: Bob f, F+1+2 throw
+ * TODO: Bryan d/f+1, 1, 1, 1, 2
+ *
  *        CLEANING UP THE CODE
  * TODO: Refactor obviously hackey MostMissedCards component - DRY
  * TODO: Refactor RenderMissedCards logic to it's own component - too messy in RoundHistory
