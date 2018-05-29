@@ -25,7 +25,16 @@ export default class RoundsPlayedHistory extends Component {
   render() {
     return (
       <div>
-        <h2>History</h2>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            marginBottom: 10
+          }}
+        >
+          <h2>History - All {this.props.roundsList.length} Rounds</h2>
+        </div>
+
         <div>{this.renderRoundsPlayedHistory()}</div>
       </div>
     );

@@ -25,7 +25,12 @@ class Trainer extends Component {
     const { round, updateCards } = this.props;
 
     if (roundEnd && postRoundData) {
-      return <ScoreView postRoundData={postRoundData} />;
+      return (
+        <ScoreView
+          postRoundData={postRoundData}
+          playAgain={() => this.handleClick()}
+        />
+      );
     }
 
     if (!roundStart)

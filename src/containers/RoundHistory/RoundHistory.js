@@ -15,33 +15,26 @@ const TotalAverageScore = props => {
 
   return (
     <div>
-      <h3>
-        {" "}
-        Average:{" "}
-        <Circle
-          progress={averagedScores}
-          bgColor="red"
-          textStyle={{ font: "bold 8rem Helvetica, Arial, sans-serif" }}
-        />{" "}
-      </h3>
+      <h3> Average </h3>
+      <Circle
+        progress={averagedScores}
+        bgColor="red"
+        textStyle={{ font: "bold 8rem Helvetica, Arial, sans-serif" }}
+      />{" "}
     </div>
   );
 };
 
-const TotalRoundsPlayed = props => {
-  return <h3>Total # of Rounds Played: {props.roundsList.length}</h3>;
-};
-
 const MostRecentScore = props => {
   return (
-    <h3>
-      Recent:{" "}
+    <div>
+      <h3>Recent </h3>
       <Circle
         progress={props.roundsList.slice(-1)[0]["percent"]}
         bgColor="red"
         textStyle={{ font: "bold 8rem Helvetica, Arial, sans-serif" }}
       />{" "}
-    </h3>
+    </div>
   );
 };
 
@@ -70,13 +63,13 @@ export default class RoundHistory extends Component {
       const roundsList = history[character][filter][property];
       return (
         <div style={{ textAlign: "center" }}>
-          <HistoryHeader />
-          <h2>
-            Statistics for {character} {filter} {property}
-          </h2>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <HistoryHeader
+            character={character}
+            filter={filter}
+            property={property}
+          />
+          <div style={{ display: "flex", justifyContent: "space-evenly" }}>
             <MostRecentScore roundsList={roundsList} />
-            <TotalRoundsPlayed roundsList={roundsList} />
             <TotalAverageScore roundsList={roundsList} />
           </div>
           <MissedCardsTable

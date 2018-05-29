@@ -6,6 +6,17 @@
  * TODO: Bob f, F+1+2 throw
  * TODO: Bryan d/f+1, 1, 1, 1, 2
  *
+ *        InitialView:
+ * TODO: Turn paragraphs of text into 3 Tabs to be opened
+ * TODO: Character select screen with thumbnails
+ * TODO: Character Thumbnail Header at top of the screen with Filter and Property listed
+ *
+ *        ScoreView:
+ * TODO: Make it so that Play Again actually starts another round up
+ *
+ *        RoundSummary:
+ * TODO: Add ability to show date, as well as to show a key value (ie 1, 2, etc)
+ *
  *        CLEANING UP THE CODE
  * TODO: Add a styles object to all pages using multiple sets of styling.
  *

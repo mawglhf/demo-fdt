@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
 import ScoreTable from "./ScoreTable";
@@ -15,7 +14,7 @@ export default class ScoreView extends Component {
   }
 
   render() {
-    const { postRoundData } = this.props;
+    const { postRoundData, playAgain } = this.props;
     return (
       <div>
         <RoundSummary postRoundData={postRoundData} />
@@ -26,9 +25,11 @@ export default class ScoreView extends Component {
             postRoundData={postRoundData}
             updateDataStored={() => this.setState({ dataStored: true })}
           />
-          <Link to="/trainer">
-            <Button bsStyle="primary"> Play Again </Button>
-          </Link>
+
+          <Button bsStyle="primary" onClick={() => playAgain()}>
+            {" "}
+            Play Again{" "}
+          </Button>
         </div>
       </div>
     );
