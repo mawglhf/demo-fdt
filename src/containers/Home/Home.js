@@ -65,19 +65,17 @@ export default class Home extends Component {
                 Filters allow you to choose which types of moves you want to
                 learn. Brush up quickly on a matchup by selecting the 'Most
                 Popular' moves. Take every free drop of damage by selecting
-                'Punishable on Block' moves. For the true Tekken competitor,
-                select 'All' to familiarize yourself with every possible
-                situation.
+                'Block Punishable' moves. For the true Tekken competitor, select
+                'All' to familiarize yourself with every possible situation.
               </p>
               <h3> What are properties? </h3>
               <p>
                 Properties allow you to choose which aspect of the moves data
-                you want to learn. For completely new matchup training, select
-                Move Name, to learn to identify each move by name. For most
-                users, selecting On Block will provide you with the data you
-                need to know to punish properly. For advanced users wishing to
-                create advantageous situations and craft setups, selecting
-                Startup will teach you what options they have in any situation.
+                you want to learn. For most users, selecting 'on_block' will
+                provide you with the data you need to know to punish properly.
+                For advanced users wishing to create advantageous situations and
+                craft setups, selecting 'speed' will teach you what options they
+                have in any situation.
               </p>
             </Tab>
             <Tab eventKey={2} title="Purpose">
@@ -92,9 +90,9 @@ export default class Home extends Component {
               </p>
 
               <p>
-                We need that information to absorbed and retained. We must be
+                We need that information to be absorbed and retained. We must be
                 able to recall it instantly, in the moment when it matters most.
-                That secret discord tech needs to become knowledge. That's where
+                That secret discord-tech needs to become knowledge. That's where
                 FDT comes in. Reinforce that information in training, to turn it
                 into knowledge.
               </p>
@@ -117,9 +115,7 @@ export default class Home extends Component {
 
               <p>Feedback is not only welcomed but also greatly appreciated.</p>
 
-              <p>Reach us on Twitter @t7fdt</p>
-
-              <p>Check out the source code at github.com/nrgaposok/t7fdt</p>
+              <p>Reach out: nrgaposok [at] pm [dot] me</p>
             </Tab>
           </Tabs>
         </div>
