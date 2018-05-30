@@ -28,7 +28,12 @@ class Trainer extends Component {
       return (
         <ScoreView
           postRoundData={postRoundData}
-          playAgain={() => this.handleClick()}
+          playAgain={() =>
+            this.setState({
+              roundStart: false,
+              roundEnd: false
+            })
+          }
         />
       );
     }
