@@ -55,8 +55,8 @@ export default class RoundHistory extends Component {
     if (!roundTypeExists) {
       return (
         <h2>
-          Currently, you do not have any recorded round data with the selected
-          options
+          You do not have any recorded round data with the current options. Make
+          sure you have the correct Character, Filter, and Property selected.
         </h2>
       );
     } else {

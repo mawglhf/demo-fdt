@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Alert } from "react-bootstrap";
+import { Button, Alert, Panel } from "react-bootstrap";
 
 export default class InitialView extends Component {
   constructor(props) {
@@ -44,21 +44,6 @@ export default class InitialView extends Component {
           </Button>
 
           <p>
-            In the trainer, you are shown a series of moves and are tested on
-            how well you know the correct frame data. The trainer is completely
-            customizable. Use the NavBar to choose the character, filter, and
-            property based on your needs.
-          </p>
-
-          <p>
-            After selecting the character, select a filter to narrow down their
-            movelist. To learn a new character, the "Most Popular" filter is a
-            good starting point. Finally, select which data you wish to learn.
-            Looking to punish? Select the "on_block" property. Curious about
-            startup? Select the "speed" property.
-          </p>
-
-          <p>
             After choosing character, filter, and property, click "Setup Round".
             When you're ready to start the round, click "Start Round".
           </p>
@@ -67,6 +52,30 @@ export default class InitialView extends Component {
             FDT is constantly being improved. At the moment, only Dragunov's
             Most Popular moves have working GIFs!
           </Alert>
+
+          <Panel id="collapsible-panel-example-2" defaultCollapsed>
+            <Panel.Heading>
+              <Panel.Title toggle>Trainer Setup - Quick Start</Panel.Title>
+            </Panel.Heading>
+            <Panel.Collapse>
+              <Panel.Body>
+                <p>
+                  In the trainer, you are shown a series of moves and are tested
+                  on how well you know the correct frame data. The trainer is
+                  completely customizable. Use the NavBar to choose the
+                  character, filter, and property based on your needs.
+                </p>
+
+                <p>
+                  After selecting the character, select a filter to narrow down
+                  their movelist. To learn a new character, the "Most Popular"
+                  filter is a good starting point. Finally, select which data
+                  you wish to learn. Looking to punish? Select the "on_block"
+                  property. Curious about startup? Select the "speed" property.
+                </p>
+              </Panel.Body>
+            </Panel.Collapse>
+          </Panel>
         </div>
       </div>
     );
