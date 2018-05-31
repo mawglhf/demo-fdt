@@ -50,14 +50,13 @@ export default class Home extends Component {
               <h3> How does this work? </h3>
               <p>
                 Choose the exact data you want to learn by selecting a
-                character, filter and property. When you're ready, press Start
-                to begin a round customized to your specifications. During each
-                round, you will be shown a series of cards, corresponding to a
-                certain move. Once a card is shown, you must select the correct
-                answer for that moves data. By the way, you're timed. So don't
-                even think about cheating. Once all cards have been shown, the
-                round is over. Get feedback on your performance in the round
-                with the Score Screen.
+                character, filter and property. When you're ready, press Setup
+                Round, and then Start Round. During each round, you will be
+                shown a series of cards, corresponding to a certain move. Once a
+                card is shown, you must select the correct answer for that moves
+                data. Once all cards have been shown, the round is over. Get
+                feedback on your performance after the round at the Score
+                Screen.
               </p>
 
               <h3> What are filters? </h3>

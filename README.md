@@ -1,5 +1,7 @@
 # Frame Data Trainer
 
+### https://fdtrainer.herokuapp.com/
+
 Frame Data Trainer, FDT for short, is an application that teaches players frame data for T7. Referencing frame data and really knowing frame data are quite different. FDT allows players to turn that information into knowledge.
 
 Focused and deliberate practice makes perfect. Test yourself by playing a round with the trainer. After each round, you receive feedback on exactly where you succeeded and where you fell short. You can even view your progress over time on the User Stats page.
@@ -35,10 +37,10 @@ Finally, open http://localhost:3000 to view it in the broswer.
 * [React-Circle](https://github.com/zzarcon/react-circle)
 * [Lodash](https://lodash.com/docs/4.17.10)
 
+## Acknowledgments
+
+* T7 Frame Data sourced from both [T7Chicken](https://github.com/TekkenChicken) and [tekken-frame-data](https://github.com/harounb/tekken-frame-data) originally provided by rbnorway.org
+
 ## Author
 
 * **Michael Wyatt** - nrgaposok [at] pm [dot] me
-
-## Acknowledgments
-
-* T7 Frame Data sourced from both [tekken-frame-data](https://github.com/harounb/tekken-frame-data) and [T7Chicken](https://github.com/TekkenChicken), originally provided by rbnorway.org
