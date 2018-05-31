@@ -1,6 +1,7 @@
 import _ from "lodash";
 
 export const allFilterNames = [
+  "All",
   "Most Popular",
   "Block Punishable",
   "While Standing",
@@ -60,6 +61,11 @@ const stringsFn = move => move["hit_level"].includes(", ");
 const throwsFn = move => move["on_block"].includes("null");
 
 const allFiltersArr = [
+  {
+    label: "All",
+    key: "all",
+    method: move => move
+  },
   {
     label: "Most Popular",
     key: "most_popular",
