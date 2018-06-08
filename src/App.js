@@ -66,16 +66,7 @@ class App extends Component {
     const { character, filter, property, round } = this.state;
     return (
       <BrowserRouter>
-        <div
-          className="container"
-          id="app-container"
-          style={{
-            paddingLeft: 0,
-            paddingRight: 0,
-            backgroundColor: "#ccc",
-            height: "100vh"
-          }}
-        >
+        <div style={{ backgroundColor: "#012a45" }}>
           <NavBar
             character={character}
             filter={filter}
@@ -84,41 +75,55 @@ class App extends Component {
             updateFilter={this.updateFilter}
             updateProperty={this.updateProperty}
           />
-
-          <Jumbotron
-            style={{ paddingTop: 5, marginBottom: 0, backgroundColor: "#ccc" }}
+          <div
+            className="container"
+            id="app-container"
+            style={{
+              paddingLeft: 0,
+              paddingRight: 0,
+              height: "100vh",
+              color: "#fefefe"
+            }}
           >
-            <Switch>
-              <Route
-                path="/history"
-                render={props => (
-                  <RoundHistory
-                    {...props}
-                    character={character}
-                    filter={filter}
-                    property={property}
-                    history={JSON.parse(
-                      localStorage.getItem("userRoundsHistory")
-                    )}
-                  />
-                )}
-              />
+            <Jumbotron
+              style={{
+                paddingTop: 5,
+                marginBottom: 0,
+                backgroundColor: "#012a45"
+              }}
+            >
+              <Switch>
+                <Route
+                  path="/history"
+                  render={props => (
+                    <RoundHistory
+                      {...props}
+                      character={character}
+                      filter={filter}
+                      property={property}
+                      history={JSON.parse(
+                        localStorage.getItem("userRoundsHistory")
+                      )}
+                    />
+                  )}
+                />
 
-              <Route
-                path="/trainer"
-                render={props => (
-                  <Trainer
-                    {...props}
-                    updateCards={() => this.updateCards()}
-                    round={round}
-                    style={{ textAlign: "center" }}
-                  />
-                )}
-              />
+                <Route
+                  path="/trainer"
+                  render={props => (
+                    <Trainer
+                      {...props}
+                      updateCards={() => this.updateCards()}
+                      round={round}
+                      style={{ textAlign: "center" }}
+                    />
+                  )}
+                />
 
-              <Route path="/" component={Home} />
-            </Switch>
-          </Jumbotron>
+                <Route path="/" component={Home} />
+              </Switch>
+            </Jumbotron>
+          </div>
         </div>
       </BrowserRouter>
     );

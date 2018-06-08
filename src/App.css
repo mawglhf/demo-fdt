@@ -1,3 +1,37 @@
+/**
+* BOTH TAKEN FROM t7movespretty
+*/
+
+.glow {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: glow;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-name: glow;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #0af1f5;
+  }
+  100% {
+    text-shadow: 0 0 25px #0af1f5;
+  }
+}
+
+.char-head {
+  color: #fff;
+  font-family: Trump, Arial, sans-serif;
+  font-size: 40px;
+  font-style: italic;
+  text-shadow: 0 0 5px #0af1f5;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .App {
   text-align: center;
 }

@@ -14,7 +14,11 @@ export default class NavBar extends Component {
     const { updateCharacter, updateFilter, updateProperty } = this.props;
 
     return (
-      <Navbar inverse collapseOnSelect style={{ marginBottom: 5 }}>
+      <Navbar
+        inverse
+        collapseOnSelect
+        style={{ marginBottom: 5, backgroundColor: "#2c383d" }}
+      >
         <Navbar.Header>
           <Navbar.Brand>
             <Link to="/"> FDT </Link>

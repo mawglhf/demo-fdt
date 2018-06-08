@@ -39,7 +39,7 @@ export default class ScoreTable extends Component {
         showPagination={roundCardsList.length > 15}
         columns={columns}
         defaultPageSize={roundCardsList.length}
-        style={{ height: 700, textAlign: "center" }}
+        style={{ height: 700, textAlign: "center", color: "#4f5d62" }}
         className="-highlight"
         getTrProps={(state, rowInfo, column) => {
           return {

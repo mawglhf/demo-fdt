@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import { Image } from "react-bootstrap";
 
-import drag from "../../utils/dragunov_thumbnail.png";
-
 /**
  * TODO: Refactor from harcoded example to variable
  */
 
 export default class HistoryHeader extends Component {
+  getCharacterImg = charName => {
+    const lowercase = charName.toLowerCase();
+    return "../../assets/char_thumbnails/" + lowercase + "_thumbnail.png";
+  };
+
   render() {
     const { character, filter, property } = this.props;
     return (
@@ -17,7 +20,7 @@ export default class HistoryHeader extends Component {
         </h3>
 
         <Image
-          src={drag}
+          src={this.getCharacterImg(character)}
           style={{
             maxWidth: 250,
             height: "auto",

@@ -32,3 +32,55 @@
  * TODO: Bryan d/f+1, 1, 1, 1, 2 missing
  *
  */
+
+/**
+  * Style / Color Notes
+  * Table row background color Dark: #2c383d    dark grey     NavBar background color
+  * Table row background color Light: #303d43   light grey
+  * Table row text color: #4f5d62   lighter grey
+  * Table row option text color: #03a7df    light blue
+  * Table border color: #01507b             darker light blue
+  * Selected row background color: #025480    medium light blue SAME
+  * Selected row text color: #fefefe          pretty much white
+  * Selected row Border color: #80ffff        light turquoise
+  * Menu font light blue color: #0e9ddc       light blue on dark navy background 
+  * Button background color: #025480          medium light blue SAME
+  * Main Menu Background Color: #012a45       dark navy 
+  * 
+  * 
+  * tk7movespretty font styles:
+.header>h3 {
+    margin: 0;
+    color: #fff;
+    font-family: Trump,Arial,sans-serif;
+    font-size: 50px;
+    margin-top: 5px;
+    font-style: italic;
+    margin-left: -15px;
+    align-self: flex-start;
+    flex-grow: .8;
+    flex-basis: 0;
+}
+
+.glow {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-name: glow;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-name: glow;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+user agent stylesheet
+h3 {
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+  */
