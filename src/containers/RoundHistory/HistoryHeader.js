@@ -1,18 +1,28 @@
 import React, { Component } from "react";
 import { Image } from "react-bootstrap";
 
+import thumbs from "../../assets/importAssets";
 /**
  * TODO: Refactor from harcoded example to variable
  */
 
 export default class HistoryHeader extends Component {
-  getCharacterImg = charName => {
-    const lowercase = charName.toLowerCase();
-    return "../../assets/char_thumbnails/" + lowercase + "_thumbnail.png";
+  /**
+   *  Takes in charName {string} and
+   *  returns corresponding thumbnail {string}
+   */
+  getCharacterThumbnail = charName => {
+    return thumbs[
+      charName
+        .split("-")
+        .join("")
+        .toLowerCase()
+    ];
   };
 
   render() {
     const { character, filter, property } = this.props;
+
     return (
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <h3 style={{ textAlign: "left" }}>
@@ -20,7 +30,7 @@ export default class HistoryHeader extends Component {
         </h3>
 
         <Image
-          src={this.getCharacterImg(character)}
+          src={this.getCharacterThumbnail(character)}
           style={{
             maxWidth: 250,
             height: "auto",
@@ -32,9 +42,3 @@ export default class HistoryHeader extends Component {
     );
   }
 }
-
-/**
- *           minHeight: 150,
-          background: "no-repeat right",
-          backgroundImage: `url(${drag})`
- */

@@ -81,7 +81,8 @@ class App extends Component {
             style={{
               paddingLeft: 0,
               paddingRight: 0,
-              height: "100vh",
+              minHeight: "100vh",
+              height: "100%",
               color: "#fefefe"
             }}
           >

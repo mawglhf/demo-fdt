@@ -3,7 +3,6 @@
  *
  *        Cleaning up the code:
  * TODO: Add a styles object to all pages using multiple sets of styling.
- * TODO: Create an assets folder and move drag's thumbnail to it
  *
  *        InitialView:
  * TODO: Character select screen with thumbnails
