@@ -22,7 +22,7 @@ export default class RenderCard extends Component {
           {" "}
           {notation}{" "}
         </h2>
-        <CardImage image={image} />
+        <CardImage image={image} character={this.props.character} />
         <CardButtons
           choices={choices}
           clickFunction={this.props.buttonFunction}

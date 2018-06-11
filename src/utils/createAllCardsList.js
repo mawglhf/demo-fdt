@@ -28,6 +28,7 @@ const getAllChoices = (charData, propertyName) => {
  * Creates a property on the card object called choices which is an array of strings
  * @param {string}  cardAnswer The property of that card
  * @param {array} allChoices list of move choices
+ * TODO: create a function to weed out all the answers I don't want shown
  */
 const createCardChoices = (cardAnswer, allChoices) => {
   const choicesArray = [cardAnswer];

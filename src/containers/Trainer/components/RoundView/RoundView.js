@@ -94,7 +94,11 @@ class RoundView extends Component {
             score={userScore}
             remaining={remaining}
           />
-          <RenderCard card={currentCard} buttonFunction={this.handleClick} />
+          <RenderCard
+            card={currentCard}
+            buttonFunction={this.handleClick}
+            character={round.character}
+          />
         </div>
       );
     }

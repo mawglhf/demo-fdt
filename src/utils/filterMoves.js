@@ -1,24 +1,97 @@
 import _ from "lodash";
 
+// QCF = 112, QCB = 49, "f, n, d," = 91,
 export const allFilterNames = [
   "All",
   "Most Popular",
   "Block Punishable",
+  "Throws",
+  "Strings",
   "While Standing",
   "Full Crouch",
-  "Strings",
-  "Throws",
-  "Stance"
+  "Side Step",
+  "Stance",
+  "Back Turned"
 ];
 
 /**
  * TODO: Completely fill allStanceNames
+ * TODO: ALSO CONSIDER AN ALTERNATE STANCE LIST: BT, SS,
+ *
+ * TODO: STANCES TO DOUBLE CHECK: TNT, GUP
  */
-const allStanceNames = ["AOP", "HYP", "RDS"];
+const allStanceNames = [
+  "TPORT",
+  "DFLIP",
+  "DBT",
+  "DES",
+  "SBT",
+  "LCT",
+  "BAL",
+  "TNT",
+  "GUP",
+  "STB",
+  "FLY",
+  "RLX",
+  "HSP",
+  "MG",
+  "KNP",
+  "STC",
+  "GOL",
+  "SG",
+  "HS",
+  "RAI",
+  "LFF",
+  "LFS",
+  "RFF",
+  "RFS",
+  "CSK",
+  "SIT",
+  "ZEN",
+  "CDS",
+  "SWB",
+  "SWS",
+  "HAR",
+  "RSS",
+  "DVK",
+  "HBS",
+  "ROL",
+  "DEN",
+  "SEN",
+  "DSS",
+  "TFS",
+  "HMS",
+  "MS",
+  "BOK",
+  "KNK",
+  "SCT",
+  "TWIST",
+  "HAZ",
+  "SAV",
+  "SNK",
+  "ALB",
+  "DCK",
+  "FLIK",
+  "LWV",
+  "PAB",
+  "PKB",
+  "RWV",
+  "SWY",
+  "AOP",
+  "HYP",
+  "RDS",
+  "DGF",
+  "FLE",
+  "INS",
+  "KIN",
+  "MED",
+  "NSS",
+  "WFL"
+];
 
 const stanceFn = move => {
   const notation = move["notation"];
-  return allStanceNames.forEach(function(stance) {
+  return allStanceNames.forEach(stance => {
     if (_.includes(notation, stance)) {
       return true;
     } else {
@@ -58,7 +131,11 @@ const fullCrouchFn = move => move["notation"].includes("FC");
 
 const stringsFn = move => move["hit_level"].includes(", ");
 
-const throwsFn = move => move["on_block"].includes("null");
+const throwsFn = move => move["on_block"].includes("throw");
+
+const sideStepFn = move => move["notation"].includes("SS");
+
+const backTurnedFn = move => move["notation"].includes("BT");
 
 const allFiltersArr = [
   {
@@ -100,6 +177,16 @@ const allFiltersArr = [
     label: "Stance",
     key: "stance",
     method: stanceFn
+  },
+  {
+    label: "Side Step",
+    key: "ss",
+    method: sideStepFn
+  },
+  {
+    label: "Back Turned",
+    key: "bt",
+    method: backTurnedFn
   }
 ];
 

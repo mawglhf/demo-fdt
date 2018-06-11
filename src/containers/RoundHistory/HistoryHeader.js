@@ -1,25 +1,9 @@
 import React, { Component } from "react";
 import { Image } from "react-bootstrap";
 
-import thumbs from "../../assets/importAssets";
-/**
- * TODO: Refactor from harcoded example to variable
- */
+import getCharThumbnail from "../../utils/getCharThumbnail";
 
 export default class HistoryHeader extends Component {
-  /**
-   *  Takes in charName {string} and
-   *  returns corresponding thumbnail {string}
-   */
-  getCharacterThumbnail = charName => {
-    return thumbs[
-      charName
-        .split("-")
-        .join("")
-        .toLowerCase()
-    ];
-  };
-
   render() {
     const { character, filter, property } = this.props;
 
@@ -30,7 +14,7 @@ export default class HistoryHeader extends Component {
         </h3>
 
         <Image
-          src={this.getCharacterThumbnail(character)}
+          src={getCharThumbnail(character)}
           style={{
             maxWidth: 250,
             height: "auto",

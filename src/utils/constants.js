@@ -5,20 +5,15 @@ export const filterNames = [
   "All",
   "Most Popular",
   "Block Punishable",
-  "While Standing",
-  "Stance",
-  "Full Crouch",
+  "Throws",
   "Strings",
-  "Throws"
+  "While Standing",
+  "Full Crouch",
+  "Side Step",
+  "Stance",
+  "Back Turned"
 ];
-export const propertyNames = [
-  "on_block",
-  "on_hit",
-  "speed",
-  "notation",
-  "active",
-  "recovery"
-];
+export const propertyNames = ["on_block", "on_hit", "speed"];
 
 // export const testUserRoundHistory = {}
 // export const testRoundCardsList = []
