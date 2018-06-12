@@ -11,9 +11,6 @@
  *        RoundSummary:
  * TODO: Add ability to show date, as well as to show a key value (ie 1, 2, etc)
  *
- *        Data verification:
- * TODO: Check for differences between data sources
- *
  *        Visuals/Styling:
  * TODO: NavBar Dropdowns should be a fixed length with scrollable menu items
  * TODO: RoundHistory - Need a LineGraph to separate User Overall Stats from Rounds Played History

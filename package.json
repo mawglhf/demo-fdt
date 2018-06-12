@@ -3,7 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.0.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint-plugin-prettier": "^2.6.0",
+    "jest": "^23.1.0",
     "prettier": "^1.13.5"
   },
   "dependencies": {
@@ -14,12 +19,13 @@
     "react-dom": "^16.4.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
-    "react-table": "^6.8.6"
+    "react-table": "^6.8.6",
+    "react-test-renderer": "^16.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest",
     "eject": "react-scripts eject"
   }
 }
