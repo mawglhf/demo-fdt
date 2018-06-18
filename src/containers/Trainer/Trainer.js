@@ -41,6 +41,7 @@ class Trainer extends Component {
     if (!roundStart)
       return (
         <InitialView
+          round={round}
           onStartPress={() => this.handleClick()}
           updateCards={() => updateCards()}
         />

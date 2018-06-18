@@ -13,14 +13,14 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "react": "^16.4.0",
+    "react": "^16.4.1",
     "react-bootstrap": "^0.32.1",
     "react-circle": "^1.0.3",
-    "react-dom": "^16.4.0",
+    "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "react-table": "^6.8.6",
-    "react-test-renderer": "^16.4.0"
+    "react-test-renderer": "^16.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
