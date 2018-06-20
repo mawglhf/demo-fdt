@@ -29,6 +29,9 @@ const getAllChoices = (charData, propertyName) => {
  * @param {string}  cardAnswer The property of that card
  * @param {array} allChoices list of move choices
  * TODO: create a function to weed out all the answers I don't want shown
+ * TODO: Remove answers of only '+' and '-'
+ * TODO: Consider replacing null with 'throw'
+ * TODO: KND Shouldn't be an answer on_block
  */
 const createCardChoices = (cardAnswer, allChoices) => {
   const choicesArray = [cardAnswer];
@@ -84,3 +87,8 @@ const createAllCards = (characterName, filterName, propertyName) => {
 };
 
 export default createAllCards;
+
+/**
+ * ISSUES WITH CARDS:
+ *
+ */

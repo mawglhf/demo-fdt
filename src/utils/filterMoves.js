@@ -130,7 +130,14 @@ const whileStandingFn = move => move["notation"].includes("WS");
 const fullCrouchFn = move => move["notation"].includes("FC");
 
 const stringsFn = move => move["hit_level"].includes(", ");
-
+/**
+ * Different ways to tell
+ * 1. hit_level includes throw.
+ * 2. on_block is null.
+ *    exceptions: includes jumping moves, all unblockables, stance switching, things that don't hit
+ * 3. on_hit includes throw       // 67 matching moves
+ *    exceptions: includes hit-throws
+ */
 const throwsFn = move => move["on_block"].includes("throw");
 
 const sideStepFn = move => move["notation"].includes("SS");
