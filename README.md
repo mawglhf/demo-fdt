@@ -30,17 +30,18 @@ Finally, open http://localhost:3000 to view it in the broswer.
 
 ## Built With
 
-* [React](https://github.com/facebook/create-react-app)
-* [React-Bootstrap](https://react-bootstrap.github.io/)
-* [React-Router](https://github.com/ReactTraining/react-router)
-* [React-Table](https://react-table.js.org/#/story/readme)
-* [React-Circle](https://github.com/zzarcon/react-circle)
-* [Lodash](https://lodash.com/docs/4.17.10)
+- [React](https://github.com/facebook/create-react-app)
+- [React-Bootstrap](https://react-bootstrap.github.io/)
+- [React-Router](https://github.com/ReactTraining/react-router)
+- [React-Table](https://react-table.js.org/#/story/readme)
+- [React-Circle](https://github.com/zzarcon/react-circle)
+- [Lodash](https://lodash.com/docs/4.17.10)
 
 ## Acknowledgments
 
-* T7 Frame Data sourced from both [T7Chicken](https://github.com/TekkenChicken) and [tekken-frame-data](https://github.com/harounb/tekken-frame-data) originally provided by rbnorway.org
+- T7 Frame Data sourced from [tekken-frame-data](https://github.com/harounb/tekken-frame-data) originally provided by rbnorway.org
+- T7 Character Thumbails from [tk7movespretty](https://github.com/mspkvp/tk7movespretty)
 
 ## Author
 
-* **Michael Wyatt** - nrgaposok [at] pm [dot] me
+- **Michael Wyatt** - nrgaposok [at] pm [dot] me

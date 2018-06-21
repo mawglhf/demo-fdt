@@ -44,6 +44,9 @@ export default class NavBar extends Component {
               select={choice => updateProperty(choice)}
             />
             <li>
+              <Link to="/trainer"> Trainer </Link>
+            </li>
+            <li>
               <Link to="/history"> User Stats </Link>
             </li>
           </Nav>

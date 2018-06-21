@@ -133,6 +133,7 @@ const stringsFn = move => move["hit_level"].includes(", ");
 /**
  * Different ways to tell
  * 1. hit_level includes throw.
+ *    exceptions:
  * 2. on_block is null.
  *    exceptions: includes jumping moves, all unblockables, stance switching, things that don't hit
  * 3. on_hit includes throw       // 67 matching moves
