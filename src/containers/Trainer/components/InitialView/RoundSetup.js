@@ -20,7 +20,7 @@ export default class InitialView extends Component {
             onClick={() => onStartPress()}
             block
           >
-            "Start Round"
+            Start Round
           </Button>
           <p>
             If the Round Information below looks correct, click "Start Round"
@@ -28,7 +28,7 @@ export default class InitialView extends Component {
           <h2>Character: {round.character}</h2>
           <h2>Filter: {round.filter}</h2>
           <h2>Property: {round.property}</h2>
-          <h2>Number of Moves in Round {cards.length}</h2>
+          <h2>Number of Moves in Round: {cards.length}</h2>
         </div>
       </div>
     );
