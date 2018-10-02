@@ -1200,16 +1200,6 @@
         "notes": null
       },
       {
-        "notation": "d/b or d+3 (Close)",
-        "hit_level": "l (TC)?",
-        "damage": "10",
-        "speed": "15",
-        "on_block": "-11",
-        "on_hit": "-2",
-        "on_ch": "-2",
-        "notes": null
-      },
-      {
         "notation": "d/b or d+3 (Far)",
         "hit_level": "l (TC)?",
         "damage": "6",

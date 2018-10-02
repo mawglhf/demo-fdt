@@ -1,3 +1,4 @@
+// Separate the choices/button creation logic from the presentation
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
 /**

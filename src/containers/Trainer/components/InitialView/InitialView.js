@@ -1,3 +1,4 @@
+// At the very least, separate the card creation logic from a component that renders tabs and text
 import React, { Component } from "react";
 import { Button, Alert, Tabs, Tab } from "react-bootstrap";
 

@@ -1,3 +1,5 @@
+// Should not be exporting InitialView with this component name
+// Especially considering another component in the same folder has that file name
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
 

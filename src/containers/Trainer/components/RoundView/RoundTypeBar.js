@@ -1,3 +1,5 @@
+// Could possibly refactor to extract the three aspects of the round
+// That way they could be used in other places, then again theyre only divs lol
 import React, { Component } from "react";
 
 export default class RoundTypeBar extends Component {

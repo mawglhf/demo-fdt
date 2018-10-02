@@ -1,3 +1,5 @@
+// WAY TOO MUCH going on in here dude
+
 import React, { Component } from "react";
 import _ from "lodash";
 import Circle from "react-circle";

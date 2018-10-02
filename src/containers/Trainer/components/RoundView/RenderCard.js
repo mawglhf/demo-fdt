@@ -1,3 +1,5 @@
+// See what you can do to make it so that you don't need this comment.
+// Assuming a simple amount of renaming needed if even that
 import React, { Component } from "react";
 
 import CardButtons from "./CardButtons";

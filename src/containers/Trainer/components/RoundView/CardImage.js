@@ -1,3 +1,4 @@
+// Refactor to extract the logic to check for an image
 import React, { Component } from "react";
 import { Image } from "react-bootstrap";
 

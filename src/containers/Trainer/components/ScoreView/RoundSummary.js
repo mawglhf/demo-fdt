@@ -1,3 +1,4 @@
+// Could refactor these items into cards or something for reuse? Not totally necessary though.
 import React, { Component } from "react";
 
 // Needed props = character, filter, property, score,

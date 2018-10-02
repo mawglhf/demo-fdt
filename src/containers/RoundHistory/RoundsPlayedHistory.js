@@ -1,3 +1,5 @@
+// Refactor, at the very least split presentation from logic
+
 import React, { Component } from "react";
 
 import ScoreTable from "../Trainer/components/ScoreView/ScoreTable";

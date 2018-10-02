@@ -1,3 +1,7 @@
+// 1. Theres a lot going on here 2. Got some huge functions
+// Also commented out code lingering is an issue
+// If I need to have that around to remember, maybe its time to write some docs?
+
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
 import _ from "lodash";

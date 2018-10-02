@@ -1,3 +1,6 @@
+// My word, there's a lot going on in here.
+// The question isnt whether, but instead how to go about the refactor.
+// Start here and move down to smaller components, or the opposite. Consideration/ Research required.
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Jumbotron } from "react-bootstrap";

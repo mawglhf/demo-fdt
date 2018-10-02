@@ -1,3 +1,5 @@
+// Presentational so move to components
+
 import React, { Component } from "react";
 import { Image } from "react-bootstrap";
 

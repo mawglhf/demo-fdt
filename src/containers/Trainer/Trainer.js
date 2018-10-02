@@ -1,3 +1,7 @@
+// This component is like a home for a ton of other stuff
+// It's main job is to house the logic behind where the user is in a Round of the Trainer.
+// Application State aka Redux is an obvious solution, but is it necessary?
+// I think at the very least cleaning up this component is.
 import React, { Component } from "react";
 
 import InitialView from "./components/InitialView/InitialView";

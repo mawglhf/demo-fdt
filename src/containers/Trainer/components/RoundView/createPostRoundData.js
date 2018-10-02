@@ -1,3 +1,5 @@
+//TODO Need to refactor so that these functions take in less arguments.
+
 const getRoundCardsList = (choices, correct, cards) => {
   return cards.map((card, i) => {
     return [card.notation, card.answer, choices[i], correct[i].toString()];
@@ -19,7 +21,7 @@ const createPostRoundData = (roundObj, choices, correct, cards, score) => {
   postRoundData["missedCardsList"] = missedCardsList;
 
   postRoundData["score"] = score;
-  postRoundData["percent"] = Math.round(score / cards.length * 100);
+  postRoundData["percent"] = Math.round((score / cards.length) * 100);
   postRoundData["date"] = new Date();
 
   return postRoundData;
