@@ -5,22 +5,22 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-jest": "^23.6.0",
-    "enzyme": "^3.6.0",
-    "enzyme-adapter-react-16": "^1.5.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
     "eslint-plugin-prettier": "^2.7.0",
     "jest": "^23.6.0",
     "prettier": "^1.14.3"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "react": "^16.5.2",
+    "react": "^16.6.0",
     "react-bootstrap": "^0.32.4",
     "react-circle": "^1.1.1",
-    "react-dom": "^16.5.2",
+    "react-dom": "^16.6.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "react-table": "^6.8.6",
-    "react-test-renderer": "^16.5.2"
+    "react-test-renderer": "^16.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
