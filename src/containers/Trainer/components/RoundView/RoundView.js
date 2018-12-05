@@ -1,4 +1,4 @@
-// WAY too much going on again dude
+// Too much going on
 import React, { Component } from "react";
 
 import RoundTypeBar from "./RoundTypeBar";
