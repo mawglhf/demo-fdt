@@ -6,26 +6,32 @@
     "babel-core": "^6.26.3",
     "babel-jest": "^23.6.0",
     "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.6.0",
+    "enzyme-adapter-react-16": "^1.7.0",
     "eslint-plugin-prettier": "^2.7.0",
     "jest": "^23.6.0",
-    "prettier": "^1.14.3"
+    "prettier": "^1.15.3"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "react": "^16.6.0",
+    "react": "^16.6.3",
     "react-bootstrap": "^0.32.4",
     "react-circle": "^1.1.1",
-    "react-dom": "^16.6.0",
+    "react-dom": "^16.6.3",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4",
+    "react-scripts": "^2.1.1",
     "react-table": "^6.8.6",
-    "react-test-renderer": "^16.6.0"
+    "react-test-renderer": "^16.6.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

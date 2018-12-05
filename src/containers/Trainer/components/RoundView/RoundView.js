@@ -53,7 +53,9 @@ class RoundView extends Component {
       userChoices: [...userChoices, userChoice]
     });
 
-    // If userChoice === cards[this.state.currentCardIndex]["answer"], add one to userCorrect
+    // Compare the users choice to the answer of the current card
+    // If it is correct, XXX
+    // If it isn't, YYY
     if (userChoice === round.cards[currentCardIndex]["answer"]) {
       this.setState({
         userCorrect: [...userCorrect, true],

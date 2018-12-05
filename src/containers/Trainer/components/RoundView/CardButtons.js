@@ -22,18 +22,7 @@ export default class CardButtons extends Component {
 
   render() {
     return (
-      <div
-        style={{
-          textAlign: "center",
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-
-          maxWidth: 640,
-          marginLeft: "auto",
-          marginRight: "auto"
-        }}
-      >
+      <div style={styles.buttonsContainer}>
         {this.renderButtons(this.props.choices)}
       </div>
     );
@@ -41,6 +30,15 @@ export default class CardButtons extends Component {
 }
 
 const styles = {
+  buttonsContainer: {
+    textAlign: "center",
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    maxWidth: 640,
+    marginLeft: "auto",
+    marginRight: "auto"
+  },
   choiceButtons: {
     minHeight: 20,
     width: "1vw",
