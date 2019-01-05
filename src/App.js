@@ -3,13 +3,14 @@
 // Start here and move down to smaller components, or the opposite. Consideration/ Research required.
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { Jumbotron } from "react-bootstrap";
 
+import CharacterSelect from "./containers/CharacterSelect/CharacterSelect";
 import Home from "./containers/Home/Home";
 import Trainer from "./containers/Trainer/Trainer";
 import NavBar from "./containers/NavBar/NavBar";
 import RoundHistory from "./containers/RoundHistory/RoundHistory";
 import createAllCards from "../src/utils/createAllCardsList";
+import { thumbsArr } from "./assets/importAssets";
 
 class App extends Component {
   constructor(props) {
@@ -89,13 +90,7 @@ class App extends Component {
               color: "#fefefe"
             }}
           >
-            <Jumbotron
-              style={{
-                paddingTop: 5,
-                marginBottom: 0,
-                backgroundColor: "#012a45"
-              }}
-            >
+            <div className="container">
               <Switch>
                 <Route
                   path="/history"
@@ -123,10 +118,15 @@ class App extends Component {
                     />
                   )}
                 />
-
-                <Route path="/" component={Home} />
+                <Route path="/home" component={Home} />
+                <Route
+                  path="/"
+                  render={props => (
+                    <CharacterSelect {...props} characters={thumbsArr} />
+                  )}
+                />
               </Switch>
-            </Jumbotron>
+            </div>
           </div>
         </div>
       </BrowserRouter>

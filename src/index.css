@@ -10,3 +10,63 @@ body {
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
+
+.main-container {
+  padding-top: 5;
+  width: 100%;
+  margin: 0 auto;
+  background-color: "#012a45";
+}
+
+/* FLEXBOX TESTING */
+.charSelectContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.charSelectCell {
+  flex: 1 1 auto;
+  height: auto;
+  min-height: 10vw;
+  min-width: 225px;
+  overflow: hidden;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: #337ab7;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.charSelectCell:hover {
+  background-blend-mode: multiply;
+}
+
+.charSelectCell span {
+  font-size: 17px;
+  line-height: 110px;
+  color: white;
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-weight: bold;
+}
+.charSelectCell:hover span {
+  opacity: 1;
+}
+
+/* @media screen and (max-width: 1024px) {
+  .charSelectCell {
+    min-width: 75px;
+    min-height: 45px;
+  }
+  .charSelectCell span {
+    font-size: 12.5px;
+    line-height: 45px;
+  }
+}
+*/

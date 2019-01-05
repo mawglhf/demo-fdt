@@ -25,32 +25,33 @@ export default class NavBar extends Component {
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
-
-        <Navbar.Collapse>
-          <Nav>
-            <MyNavDropdown
-              type={"Character"}
-              list={characterNames}
-              select={choice => updateCharacter(choice)}
-            />
-            <MyNavDropdown
-              type={"Filter"}
-              list={filterNames}
-              select={choice => updateFilter(choice)}
-            />
-            <MyNavDropdown
-              type={"Property"}
-              list={propertyNames}
-              select={choice => updateProperty(choice)}
-            />
-            <li>
-              <Link to="/trainer"> Trainer </Link>
-            </li>
-            <li>
-              <Link to="/history"> User Stats </Link>
-            </li>
-          </Nav>
-        </Navbar.Collapse>
+        <span style={{ display: "flex", justifyContent: "center" }}>
+          <Navbar.Collapse>
+            <Nav>
+              <MyNavDropdown
+                type={"Character"}
+                list={characterNames}
+                select={choice => updateCharacter(choice)}
+              />
+              <MyNavDropdown
+                type={"Filter"}
+                list={filterNames}
+                select={choice => updateFilter(choice)}
+              />
+              <MyNavDropdown
+                type={"Property"}
+                list={propertyNames}
+                select={choice => updateProperty(choice)}
+              />
+              <li>
+                <Link to="/trainer"> Trainer </Link>
+              </li>
+              <li>
+                <Link to="/history"> User Stats </Link>
+              </li>
+            </Nav>
+          </Navbar.Collapse>
+        </span>
       </Navbar>
     );
   }
