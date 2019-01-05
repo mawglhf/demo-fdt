@@ -20,7 +20,8 @@ class RoundView extends Component {
       userCorrect: [],
       userScore: 0,
       total: cards.length,
-      remaining: cards.length
+      remaining: cards.length,
+      afterChoice: false
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -38,6 +39,16 @@ class RoundView extends Component {
     );
   };
 
+  nextCard() {
+    const { currentCardIndex, remaining } = this.state;
+    // Now we need to call a function that will update the currentCardIndex
+    this.setState({
+      currentCardIndex: currentCardIndex + 1,
+      remaining: remaining - 1,
+      afterChoice: false
+    });
+  }
+
   handleClick = userChoice => {
     const {
       currentCardIndex,
@@ -50,7 +61,8 @@ class RoundView extends Component {
 
     // First, push userChoice to userChocies
     this.setState({
-      userChoices: [...userChoices, userChoice]
+      userChoices: [...userChoices, userChoice],
+      afterChoice: true
     });
 
     // Compare the users choice to the answer of the current card
@@ -72,16 +84,18 @@ class RoundView extends Component {
       return updatePostRoundData(this.setupPostRoundData());
     }
 
-    // Now we need to call a function that will update the currentCardIndex
-    this.setState({
-      currentCardIndex: currentCardIndex + 1,
-      remaining: remaining - 1
-    });
+    setTimeout(() => this.nextCard(), 300);
   };
 
   render() {
     const { round, updatePostRoundData, endRound } = this.props;
-    const { currentCardIndex, userScore, total, remaining } = this.state;
+    const {
+      currentCardIndex,
+      userScore,
+      total,
+      remaining,
+      afterChoice
+    } = this.state;
     const currentCard = round.cards[currentCardIndex];
 
     if (remaining < 1) {
@@ -98,6 +112,7 @@ class RoundView extends Component {
             remaining={remaining}
           />
           <RenderCard
+            afterChoice={afterChoice ? "clicked" : null}
             card={currentCard}
             buttonFunction={this.handleClick}
             character={round.character}

@@ -11,9 +11,10 @@ import CardImage from "./CardImage";
  */
 export default class RenderCard extends Component {
   render() {
-    const { notation, image, choices } = this.props.card;
+    const { notation, image, choices, answer } = this.props.card;
+    console.log(this.props.card);
     return (
-      <div>
+      <div key={notation}>
         <h2
           style={{
             display: "flex",
@@ -26,6 +27,8 @@ export default class RenderCard extends Component {
         </h2>
         <CardImage image={image} character={this.props.character} />
         <CardButtons
+          afterChoice={this.props.afterChoice}
+          answer={answer}
           choices={choices}
           clickFunction={this.props.buttonFunction}
         />
