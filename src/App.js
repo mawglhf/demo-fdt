@@ -122,7 +122,11 @@ class App extends Component {
                 <Route
                   path="/"
                   render={props => (
-                    <CharacterSelect {...props} characters={thumbsArr} />
+                    <CharacterSelect
+                      {...props}
+                      characters={thumbsArr}
+                      selectCharacter={this.updateCharacter}
+                    />
                   )}
                 />
               </Switch>

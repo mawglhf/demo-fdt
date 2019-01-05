@@ -6,7 +6,7 @@ import { Button } from "react-bootstrap";
 export default class InitialView extends Component {
   render() {
     const { round, onStartPress } = this.props;
-    const cards = round.cards;
+
     return (
       <div style={{ textAlign: "center" }}>
         <div
@@ -30,7 +30,6 @@ export default class InitialView extends Component {
           <h2>Character: {round.character}</h2>
           <h2>Filter: {round.filter}</h2>
           <h2>Property: {round.property}</h2>
-          <h2>Number of Moves in Round: {cards.length}</h2>
         </div>
       </div>
     );

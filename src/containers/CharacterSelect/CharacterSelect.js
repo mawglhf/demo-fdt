@@ -9,6 +9,7 @@ function CharacterSelect(props) {
           key={char[0]}
           className="charSelectCell"
           style={{ backgroundImage: `url(${char[1]})` }}
+          onClick={() => props.selectCharacter(char[0])}
         >
           <span>{char[0]}</span>
         </div>
@@ -23,7 +24,10 @@ function CharacterSelect(props) {
   );
 }
 
-CharacterSelect.propTypes = { characters: PropTypes.array };
+CharacterSelect.propTypes = {
+  characters: PropTypes.array.isRequired,
+  selectCharacter: PropTypes.func.isRequired
+};
 
 export default CharacterSelect;
 

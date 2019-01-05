@@ -11,7 +11,14 @@ import MyNavDropdown from "./components/MyNavDropdown";
 
 export default class NavBar extends Component {
   render() {
-    const { updateCharacter, updateFilter, updateProperty } = this.props;
+    const {
+      updateCharacter,
+      updateFilter,
+      updateProperty,
+      character,
+      filter,
+      property
+    } = this.props;
 
     return (
       <Navbar
@@ -29,17 +36,17 @@ export default class NavBar extends Component {
           <Navbar.Collapse>
             <Nav>
               <MyNavDropdown
-                type={"Character"}
+                type={character || "Character"}
                 list={characterNames}
                 select={choice => updateCharacter(choice)}
               />
               <MyNavDropdown
-                type={"Filter"}
+                type={filter || "Filter"}
                 list={filterNames}
                 select={choice => updateFilter(choice)}
               />
               <MyNavDropdown
-                type={"Property"}
+                type={property || "Property"}
                 list={propertyNames}
                 select={choice => updateProperty(choice)}
               />

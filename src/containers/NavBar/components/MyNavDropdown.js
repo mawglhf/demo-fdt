@@ -11,9 +11,8 @@ import { NavDropdown, MenuItem } from "react-bootstrap";
 export default class MyNavDropdown extends Component {
   constructor(props) {
     super(props);
-    const { type } = this.props;
     this.state = {
-      title: type
+      title: false
     };
   }
 
@@ -38,7 +37,7 @@ export default class MyNavDropdown extends Component {
     const { type, list, select } = this.props;
     const { title } = this.state;
     return (
-      <NavDropdown title={title} id={type}>
+      <NavDropdown title={title || type} id={type}>
         {this.renderMenuItems(list, select)}
       </NavDropdown>
     );
