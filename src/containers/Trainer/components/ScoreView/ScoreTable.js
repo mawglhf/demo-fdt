@@ -52,3 +52,9 @@ export default class ScoreTable extends Component {
     );
   }
 }
+
+/**
+ * roundCardsList is an List of CardsData = Array of Arrays
+ *    Each CardsData Array contains 4 items
+ *        The move, The answer, the users choice, and whether or not it was correct
+ */
