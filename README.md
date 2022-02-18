@@ -44,4 +44,4 @@ Finally, open http://localhost:3000 to view it in the broswer.
 
 ## Author
 
-- **Michael Wyatt** - nrgaposok [at] pm [dot] me
+- **Michael Wyatt** - michaelwyatt [at] protonmail [dot] com
